@@ -66,10 +66,7 @@ const Navbar2 = () => {
           <div className="hidden md:block">
             <ul className="flex items-center gap-10">
               <li className="group relative cursor-pointer">
-                <Link
-                  to="/home"
-                  className="flex h-[72px] items-center gap-[2px]"
-                >
+                <Link to="/" className="flex h-[72px] items-center gap-[2px]">
                   Home{" "}
                   <span>
                     <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
@@ -89,7 +86,9 @@ const Navbar2 = () => {
                     <li className="p-2 hover:bg-violet-200">
                       <Link to="/contact">Contact</Link>
                     </li>
-                    <li className="p-2 hover:bg-violet-200">Privacy policy</li>
+                    <li className="p-2 hover:bg-violet-200">
+                      <Link to="/privacy">Privacy policy</Link>
+                    </li>
                   </ul>
                 </div>
               </li>

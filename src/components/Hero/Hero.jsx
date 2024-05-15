@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import Banner from "../../assets/undraw_real_time_sync_re_nky7.svg";
 
 const Hero = () => {

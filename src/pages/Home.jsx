@@ -1,10 +1,28 @@
 // Home.jsx
 // import React from "react";
+import Hero from "../components/Hero/Hero";
+import Banner from "./../components/Banner/Banner";
+
+import Blogs from "./../components/Blogs/Blogs";
+import Footer from "./../components/Footer/Footer";
+import Service from "./../components/Service/Service";
+import Navbar2 from "./../components/navbar/Navbar2";
+
+import Banner1 from "./../assets/blog1.jpg";
+import Banner2 from "./../assets/blog3.jpg";
+import BannerDetails from "./../components/BannerDetails/BannerDetails";
 
 const Home = () => {
   return (
     <div>
-      <h1>Home Page</h1>
+      <Navbar2 />
+      <Hero />
+      <Service />
+      <BannerDetails reverse={true} img={Banner1} />
+      <BannerDetails img={Banner2} />
+      <Banner />
+      <Blogs />
+      <Footer />
       {/* Add content for the home page */}
     </div>
   );

@@ -1,21 +1,13 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import React, { useEffect } from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Banner1 from "./assets/blog1.jpg";
-import Banner2 from "./assets/blog3.jpg";
-import Banner from "./components/Banner/Banner";
-import BannerDetails from "./components/BannerDetails/BannerDetails";
-import Blogs from "./components/Blogs/Blogs";
-import Footer from "./components/Footer/Footer";
-import Hero from "./components/Hero.jsx/Hero";
-import Service from "./components/Service/Service";
-import Navbar2 from "./components/navbar/Navbar2";
+import { useEffect } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import AboutUs from "./pages/AboutUs";
 import Career from "./pages/Career";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import Privacy from "./pages/Privacy";
 import Services from "./pages/Services";
 
 function App() {
@@ -29,28 +21,30 @@ function App() {
     AOS.refresh();
   }, []);
   return (
-    <Router>
+    <BrowserRouter>
       <div className="dark:bg-slate-900 dark:text-white">
-        <div className="fixed left-0 right-0 top-0 z-50 bg-gradient-to-l from-violet-900 via-violet-800 to-violet-900 ">
+        {/* <div className="fixed left-0 right-0 top-0 z-50 bg-gradient-to-l from-violet-900 via-violet-800 to-violet-900 ">
           <Navbar2 />
-        </div>
+        </div>  */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="/career" element={<Career />} />{" "}
           {/* New route for Career */}
         </Routes>
-        <Hero />
+
+        {/* <Hero />
         <Service />
         <BannerDetails reverse={true} img={Banner1} />
         <BannerDetails img={Banner2} />
         <Banner />
         <Blogs />
-        <Footer />
+        <Footer /> */}
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

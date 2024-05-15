@@ -29,14 +29,14 @@ const Footer = () => {
               <img
                 src={logo}
                 alt="logo"
-                className="h-full w-full object-cover"
+                className="h-full w-full transform object-cover duration-500 hover:scale-105"
                 style={{ filter: theme === "dark" ? "invert(1)" : "invert(0)" }}
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition duration-300 hover:opacity-100">
+              {/* <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition duration-300 hover:opacity-100">
                 <a href="#" className="text-lg font-bold text-white">
                   Learn More
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
           <h1 className="text-center text-xl font-bold sm:text-2xl">
