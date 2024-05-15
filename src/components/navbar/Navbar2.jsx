@@ -66,7 +66,7 @@ const Navbar2 = () => {
           <div className="hidden md:block">
             <ul className="flex items-center gap-10">
               <li className="group relative cursor-pointer">
-                <Link to="/" className="flex h-[72px] items-center gap-[2px]">
+                <Link to="" className="flex h-[72px] items-center gap-[2px]">
                   Home{" "}
                   <span>
                     <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
