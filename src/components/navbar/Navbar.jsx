@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { BiMenu, BiPhoneCall } from "react-icons/bi";
 import { FaCaretDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   // Check the local storage or user's preference for the initial theme
   const element = document.documentElement;
@@ -114,13 +116,13 @@ const Navbar = () => {
                           Development
                         </h1>
                         <li className="cursor-pointer text-black/80 hover:text-primary">
-                          Web development
+                          <Link to="/Web">Web development</Link>
                         </li>
                         <li className="cursor-pointer text-black/80 hover:text-primary">
-                          IOS App Development
+                          <Link to="/IOS">IOS App Development</Link>
                         </li>
                         <li className="cursor-pointer text-black/80 hover:text-primary">
-                          App Development
+                          <Link to="/App">App Development</Link>
                         </li>
                       </ul>
                       <ul className="mt-3 flex flex-col gap-2">
@@ -128,13 +130,13 @@ const Navbar = () => {
                           Other Services
                         </h1>
                         <li className="cursor-pointer text-black/80 hover:text-primary">
-                          Cloud Services
+                          <Link to="/Cloud">Cloud</Link>
                         </li>
                         <li className="cursor-pointer text-black/80 hover:text-primary">
-                          Mobile App
+                          <Link to="/Mobile">Mobile App</Link>
                         </li>
                         <li className="cursor-pointer text-black/80 hover:text-primary">
-                          App Development
+                          <Link to="/App">App Development</Link>
                         </li>
                       </ul>
                       <div>

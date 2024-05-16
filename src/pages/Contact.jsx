@@ -102,13 +102,15 @@ const Contact = () => {
                 <p>Email: info@example.com</p>
               </div>
             </div>
-            <div className="relative mb-4 h-48 overflow-hidden rounded-lg">
-              {/* Google Map iframe */}
-              <iframe
-                className="absolute left-0 top-0 h-full w-full"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9428891452867!2d<YOUR-LONGITUDE>&3b1d4e5a98a0f"
-                allowFullScreen
-              ></iframe>
+            <div className="relative mb-4 h-96 overflow-hidden rounded-lg shadow-lg">
+              <div className="absolute inset-0">
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.9434129044034!2d90.38741947497816!3d23.820611178622503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7080f8d81bd%3A0xe7aab9e32233a52e!2sTower%2071%20(Homes%2071%20Ltd.)!5e0!3m2!1sen!2sbd!4v1715839431661!5m2!1sen!2sbd"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>

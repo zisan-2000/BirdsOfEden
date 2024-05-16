@@ -4,11 +4,17 @@ import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import AboutUs from "./pages/AboutUs";
+import AppDev from "./pages/AppDev";
 import Career from "./pages/Career";
+import Cloud from "./pages/Cloud";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+
+import IOSAppDev from "./pages/IOSAppDev";
+import MobileApp from "./pages/MobileApp";
 import Privacy from "./pages/Privacy";
 import Services from "./pages/Services";
+import WebDev from "./pages/WebDev";
 
 function App() {
   useEffect(() => {
@@ -33,6 +39,11 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/career" element={<Career />} />{" "}
+          <Route path="/App" element={<AppDev />} />
+          <Route path="/Cloud" element={<Cloud />} />
+          <Route path="/IOS" element={<IOSAppDev />} />
+          <Route path="/Mobile" element={<MobileApp />} />
+          <Route path="/Web" element={<WebDev />} />
           {/* New route for Career */}
         </Routes>
 

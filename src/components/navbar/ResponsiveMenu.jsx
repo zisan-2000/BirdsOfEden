@@ -1,5 +1,6 @@
 import React from "react";
 import { FaUserCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ResponsiveMenu = ({ showMenu }) => {
   console.log("showMenu", showMenu);
@@ -19,25 +20,32 @@ const ResponsiveMenu = ({ showMenu }) => {
         </div>
         <nav className="mt-12">
           <ul className="space-y-4 text-xl">
-            <li>
-              <a href="#" className="mb-5 inline-block">
-                Home
-              </a>
+            <li className="p-2 hover:bg-violet-200">
+              <Link to="/">Home</Link>
             </li>
-            <li>
-              <a href="#" className="mb-5 inline-block">
-                Top Stories
-              </a>
+            <li className="p-2 hover:bg-violet-200">
+              <Link to="/about">About Us</Link>
             </li>
-            <li>
-              <a href="#" className="mb-5 inline-block">
-                Submit your story
-              </a>
+            <li className="p-2 hover:bg-violet-200">
+              <Link to="/services">Services</Link>
             </li>
-            <li>
-              <a href="#" className="mb-5 inline-block">
-                Contact
-              </a>
+            <li className="p-2 hover:bg-violet-200">
+              <Link to="/contact">Contact</Link>
+            </li>
+            <li className="p-2 hover:bg-violet-200">
+              <Link to="/privacy">Privacy policy</Link>
+            </li>
+
+            <li className="relative cursor-pointer">
+              <Link
+                to="/career"
+                className="flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-700 px-6 py-3 font-bold uppercase text-white transition duration-300 hover:from-blue-700 hover:to-blue-900"
+              >
+                Career
+                <span className="absolute right-0 top-0 -mr-2 -mt-2 rounded-full bg-red-500 px-2 py-1 text-xs font-semibold text-white">
+                  New!
+                </span>
+              </Link>
             </li>
           </ul>
         </nav>
