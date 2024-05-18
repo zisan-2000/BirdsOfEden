@@ -35,36 +35,30 @@ const Navbar2 = () => {
       <header
         data-aos="fade"
         data-aos-duration="300"
-        className="relative z-[99] border-b-[1px]  border-primary/50 bg-gradient-to-l from-blue-900 via-blue-800 to-blue-900 text-white shadow-lg"
+        className="relative z-[99] border-b-[1px] border-primary/50 bg-gradient-to-l from-blue-900 via-blue-800 to-blue-900 text-white shadow-lg"
       >
-        <nav className="container  flex h-[70px] items-center justify-between py-2 ">
-          <div className="flex items-center justify-center">
-            <div className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-white shadow-md transition duration-300 hover:shadow-xl">
+        <nav className="container mx-auto flex h-[70px] items-center justify-between px-4 py-2 md:px-0">
+          <div className="flex items-center">
+            <div className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-white shadow-md transition duration-300 hover:shadow-xl md:h-16 md:w-16">
               <img
                 src={logo}
                 alt="logo"
-                className="scale-200 h-full w-full transform object-cover"
+                className="scale-160 h-full w-full transform object-cover"
                 style={{ filter: theme === "dark" ? "invert(1)" : "invert(0)" }}
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black opacity-0 transition duration-300 hover:opacity-50">
-                <a href="#" className="text-lg font-bold text-white">
-                  Learn More
-                </a>
-              </div>
+            </div>
+            <div className="ml-3 text-xl text-white md:text-2xl">
+              <Link to="/" className="flex items-center">
+                BIRDS
+                <span className="ml-1 inline-block font-bold text-primary">
+                  OF EDEN
+                </span>
+              </Link>
             </div>
           </div>
 
-          <div className="text-2xl text-white md:text-3xl ">
-            <Link to="/" className="">
-              BIRDS
-              <span className="inline-block font-bold text-primary">
-                OF EDEN
-              </span>
-            </Link>
-          </div>
-
-          <div className="hidden md:block">
-            <ul className="flex items-center gap-10">
+          <div className="hidden items-center gap-6 md:flex">
+            <ul className="flex items-center gap-4">
               <li className="group relative cursor-pointer">
                 <Link to="" className="flex h-[72px] items-center gap-[2px]">
                   Home{" "}
@@ -72,7 +66,7 @@ const Navbar2 = () => {
                     <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
                   </span>
                 </Link>
-                <div className="absolute -left-9 z-[9999] hidden w-[150px] rounded-md bg-white p-2 text-black group-hover:block  ">
+                <div className="absolute left-0 z-[9999] hidden w-[150px] rounded-md bg-white p-2 text-black group-hover:block">
                   <ul className="space-y-3">
                     <li className="p-2 hover:bg-violet-200">
                       <Link to="/">Home</Link>
@@ -92,7 +86,7 @@ const Navbar2 = () => {
                   </ul>
                 </div>
               </li>
-              <li className="cursor pointer group">
+              <li className="group relative cursor-pointer">
                 <Link
                   to="/services"
                   className="flex h-[72px] items-center gap-[2px]"
@@ -102,8 +96,8 @@ const Navbar2 = () => {
                     <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
                   </span>
                 </Link>
-                <div className="absolute left-0 z-[9999] hidden w-full rounded-b-3xl bg-white p-2 text-black group-hover:block  ">
-                  <div className="grid grid-cols-3 gap-5 ">
+                <div className="absolute left-0 z-[9999] hidden w-full rounded-b-3xl bg-white p-2 text-black group-hover:block">
+                  <div className="grid grid-cols-3 gap-5">
                     <div className="d-200 overflow-hidden">
                       <img
                         className="max-h-[300px] w-full rounded-b-3xl object-fill"
@@ -121,7 +115,7 @@ const Navbar2 = () => {
                         aperiam deleniti reprehenderit doloribus, numquam
                         corporis quae.
                       </p>
-                      <div className="grid grid-cols-3 ">
+                      <div className="grid grid-cols-3">
                         <ul className="mt-3 flex flex-col gap-2">
                           <h1 className="pb-1 text-xl font-semibold">
                             Development
@@ -159,7 +153,7 @@ const Navbar2 = () => {
                 </div>
               </li>
 
-              <li className="cursor pointer">
+              <li className="cursor-pointer">
                 <Link to="/contact">Contact</Link>
               </li>
 
@@ -183,7 +177,6 @@ const Navbar2 = () => {
                   <div>
                     <p className="text-sm">Call us on</p>
                     <p className="text-lg">
-                      {" "}
                       <a href="tel:+91123456789">01793-874189</a>
                     </p>
                   </div>
@@ -192,32 +185,32 @@ const Navbar2 = () => {
               {theme === "dark" ? (
                 <BiSolidSun
                   onClick={() => setTheme("light")}
-                  className="text-2xl"
+                  className="cursor-pointer text-2xl"
                 />
               ) : (
                 <BiSolidMoon
                   onClick={() => setTheme("dark")}
-                  className="text-2xl"
+                  className="cursor-pointer text-2xl"
                 />
               )}
             </ul>
           </div>
-          <div className="flex items-center gap-4 md:hidden ">
+          <div className="flex items-center gap-4 md:hidden">
             {theme === "dark" ? (
               <BiSolidSun
                 onClick={() => setTheme("light")}
-                className="text-2xl"
+                className="cursor-pointer text-2xl"
               />
             ) : (
               <BiSolidMoon
                 onClick={() => setTheme("dark")}
-                className="text-2xl"
+                className="cursor-pointer text-2xl"
               />
             )}
             {showMenu ? (
               <HiMenuAlt1
                 onClick={toggleMenu}
-                className=" cursor-pointer transition-all"
+                className="cursor-pointer transition-all"
                 size={30}
               />
             ) : (
