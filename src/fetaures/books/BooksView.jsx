@@ -19,46 +19,48 @@ const BooksView = () => {
         <h2 className="mb-6 text-3xl font-bold text-gray-800">
           List of Comments
         </h2>
-        <table className="min-w-full border border-gray-300 bg-white text-gray-800">
-          <thead>
-            <tr>
-              <th className="border-b px-6 py-4 text-left text-sm font-semibold">
-                Title
-              </th>
-              <th className="border-b px-6 py-4 text-left text-sm font-semibold">
-                Comment
-              </th>
-              <th className="border-b px-6 py-4 text-left text-sm font-semibold">
-                Action
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {books &&
-              books.map((book) => {
-                const { id, title, Comment } = book;
-                return (
-                  <tr key={id} className="border-b">
-                    <td className="px-6 py-4">{title}</td>
-                    <td className="px-6 py-4">{Comment}</td>
-                    <td className="px-6 py-4">
-                      <Link to="/edit-book" state={{ id, title, Comment }}>
-                        <button className="mr-3 animate-pulse rounded-lg bg-yellow-500 px-4 py-2 text-white shadow-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">
-                          Edit
+        <div className="overflow-x-auto">
+          <table className="min-w-full border border-gray-300 bg-white text-gray-800">
+            <thead>
+              <tr>
+                <th className="border-b px-6 py-4 text-left text-sm font-semibold">
+                  Title
+                </th>
+                <th className="border-b px-6 py-4 text-left text-sm font-semibold">
+                  Comment
+                </th>
+                <th className="border-b px-6 py-4 text-left text-sm font-semibold">
+                  Action
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {books &&
+                books.map((book) => {
+                  const { id, title, Comment } = book;
+                  return (
+                    <tr key={id} className="border-b">
+                      <td className="px-6 py-4">{title}</td>
+                      <td className="px-6 py-4">{Comment}</td>
+                      <td className="flex gap-2 px-6 py-4">
+                        <Link to="/edit-book" state={{ id, title, Comment }}>
+                          <button className="mr-3 animate-pulse rounded-lg bg-yellow-500 px-4 py-2 text-white shadow-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">
+                            Edit
+                          </button>
+                        </Link>
+                        <button
+                          onClick={() => handleDeleteBook(id)}
+                          className="animate-pulse rounded-lg bg-red-500 px-4 py-2 text-white shadow-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                        >
+                          Delete
                         </button>
-                      </Link>
-                      <button
-                        onClick={() => handleDeleteBook(id)}
-                        className="animate-pulse rounded-lg bg-red-500 px-4 py-2 text-white shadow-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
-                      >
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                );
-              })}
-          </tbody>
-        </table>
+                      </td>
+                    </tr>
+                  );
+                })}
+            </tbody>
+          </table>
+        </div>
       </div>
       <Footer />
     </div>
