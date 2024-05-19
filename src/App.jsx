@@ -10,11 +10,16 @@ import Cloud from "./pages/Cloud";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 
+import AddBook from "./fetaures/books/AddBook";
+import BooksView from "./fetaures/books/BooksView";
 import IOSAppDev from "./pages/IOSAppDev";
 import MobileApp from "./pages/MobileApp";
 import Privacy from "./pages/Privacy";
 import Services from "./pages/Services";
 import WebDev from "./pages/WebDev";
+
+import EditBook from "./fetaures/books/EditBook";
+import Error from "./pages/Error";
 
 function App() {
   useEffect(() => {
@@ -44,6 +49,10 @@ function App() {
           <Route path="/IOS" element={<IOSAppDev />} />
           <Route path="/Mobile" element={<MobileApp />} />
           <Route path="/Web" element={<WebDev />} />
+          <Route path="/add-book" element={<AddBook />} />
+          <Route path="/show-books" element={<BooksView />} />
+          <Route path="/edit-book" element={<EditBook />} />
+          <Route path="*" element={<Error />} />
           {/* New route for Career */}
         </Routes>
 

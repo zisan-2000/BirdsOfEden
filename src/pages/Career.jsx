@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Footer from "../components/Footer/Footer";
+import Index from "../routes";
 import Navbar2 from "./../components/navbar/Navbar2";
 
 const Career = () => {
@@ -114,6 +115,7 @@ const Career = () => {
           </div>
         </div>
       </div>
+      <Index />
       <Footer />
     </motion.div>
   );

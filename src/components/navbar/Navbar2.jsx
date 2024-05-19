@@ -86,66 +86,61 @@ const Navbar2 = () => {
                   </ul>
                 </div>
               </li>
+
               <li className="group relative cursor-pointer">
-                <Link
-                  to="/services"
-                  className="flex h-[72px] items-center gap-[2px]"
-                >
+                <Link to="/services" className="flex h-12 items-center gap-2">
                   Services{" "}
-                  <span>
-                    <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
-                  </span>
+                  <FaCaretDown className="transform transition-transform duration-200 group-hover:rotate-180" />
                 </Link>
-                <div className="absolute left-0 z-[9999] hidden w-full rounded-b-3xl bg-white p-2 text-black group-hover:block">
-                  <div className="grid grid-cols-3 gap-5">
-                    <div className="d-200 overflow-hidden">
+                <div className="absolute left-0 z-10 hidden w-96 rounded-lg bg-white text-gray-800 shadow-lg group-hover:block">
+                  <div className="flex gap-4 p-4">
+                    <div className="w-36 overflow-hidden">
                       <img
-                        className="max-h-[300px] w-full rounded-b-3xl object-fill"
+                        className="rounded-lg"
                         src="https://picsum.photos/200"
-                        alt="pics"
+                        alt="Service"
                       />
                     </div>
-                    <div className="col-span-2">
-                      <h1 className="pb-3 text-xl font-semibold">
-                        Best Selling
-                      </h1>
-                      <p className="text-sm text-slate-600">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Aspernatur exercitationem delectus iusto animi
-                        aperiam deleniti reprehenderit doloribus, numquam
-                        corporis quae.
-                      </p>
-                      <div className="grid grid-cols-3">
-                        <ul className="mt-3 flex flex-col gap-2">
-                          <h1 className="pb-1 text-xl font-semibold">
-                            Development
-                          </h1>
-                          <li className="cursor-pointer text-black/80 hover:text-primary">
-                            <Link to="/Web">Web development</Link>
-                          </li>
-                          <li className="cursor-pointer text-black/80 hover:text-primary">
-                            <Link to="/IOS">IOS App Development</Link>
-                          </li>
-                          <li className="cursor-pointer text-black/80 hover:text-primary">
-                            <Link to="/App">App Development</Link>
-                          </li>
-                        </ul>
-                        <ul className="mt-3 flex flex-col gap-2">
-                          <h1 className="pb-1 text-xl font-semibold">
-                            Other Services
-                          </h1>
-                          <li className="cursor-pointer text-black/80 hover:text-primary">
-                            <Link to="/Cloud">Cloud</Link>
-                          </li>
-                          <li className="cursor-pointer text-black/80 hover:text-primary">
-                            <Link to="/Mobile">Mobile App</Link>
-                          </li>
-                          <li className="cursor-pointer text-black/80 hover:text-primary">
-                            <Link to="/App">App Development</Link>
-                          </li>
-                        </ul>
+                    <div>
+                      <div className="mb-4">
+                        <h1 className="text-lg font-semibold">Best Selling</h1>
+                        <p className="text-sm text-gray-600">
+                          Explore our top-rated services tailored to meet your
+                          needs.
+                        </p>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4">
                         <div>
-                          <img src="https://picsum.photos/180" alt="no image" />
+                          <h2 className="text-md mb-2 font-semibold">
+                            Development
+                          </h2>
+                          <ul className="flex flex-col gap-1">
+                            <li className="cursor-pointer hover:text-primary">
+                              <Link to="/Web">Web Development</Link>
+                            </li>
+                            <li className="cursor-pointer hover:text-primary">
+                              <Link to="/IOS">iOS App Development</Link>
+                            </li>
+                            <li className="cursor-pointer hover:text-primary">
+                              <Link to="/Android">Android App Development</Link>
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h2 className="text-md mb-2 font-semibold">
+                            Other Services
+                          </h2>
+                          <ul className="flex flex-col gap-1">
+                            <li className="cursor-pointer hover:text-primary">
+                              <Link to="/Cloud">Cloud Services</Link>
+                            </li>
+                            <li className="cursor-pointer hover:text-primary">
+                              <Link to="/Mobile">Mobile App Development</Link>
+                            </li>
+                            <li className="cursor-pointer hover:text-primary">
+                              <Link to="/Design">UI/UX Design</Link>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
