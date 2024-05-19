@@ -42,18 +42,20 @@ const BooksView = () => {
                     <tr key={id} className="border-b">
                       <td className="px-6 py-4">{title}</td>
                       <td className="px-6 py-4">{Comment}</td>
-                      <td className="flex gap-2 px-6 py-4">
-                        <Link to="/edit-book" state={{ id, title, Comment }}>
-                          <button className="mr-3 animate-pulse rounded-lg bg-yellow-500 px-4 py-2 text-white shadow-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">
-                            Edit
+                      <td className="px-6 py-4">
+                        <div className="flex flex-col gap-2">
+                          <Link to="/edit-book" state={{ id, title, Comment }}>
+                            <button className="animate-pulse rounded-lg bg-yellow-500 px-4 py-2 text-white shadow-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">
+                              Edit
+                            </button>
+                          </Link>
+                          <button
+                            onClick={() => handleDeleteBook(id)}
+                            className="animate-pulse rounded-lg bg-red-500 px-4 py-2 text-white shadow-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                          >
+                            Delete
                           </button>
-                        </Link>
-                        <button
-                          onClick={() => handleDeleteBook(id)}
-                          className="animate-pulse rounded-lg bg-red-500 px-4 py-2 text-white shadow-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
-                        >
-                          Delete
-                        </button>
+                        </div>
                       </td>
                     </tr>
                   );
