@@ -1,4 +1,5 @@
 // import React from "react";
+import { Link } from "react-router-dom";
 import Banner from "../../assets/undraw_real_time_sync_re_nky7.svg";
 
 const Hero = () => {
@@ -12,21 +13,31 @@ const Hero = () => {
             data-aos-once="true"
             className="flex flex-col items-center gap-4 text-center text-white md:items-start md:text-left "
           >
-            <h1 className=" text-4xl ">
-              We Build Apps That Get Trending On Appworld
+            <h1 className=" mb-3 scale-100 transform animate-bounce text-4xl transition-transform duration-500 hover:scale-105">
+              <span className="scale-100 transform rounded text-4xl text-primary transition-transform duration-500 hover:scale-105">
+                Birds Of Eden
+              </span>{" "}
+              Innovating the Future of Software Solutions
             </h1>
-            <p className="">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              ducimus eius quis ad enim aliquid iusto eum nihil exercitationem
-              necessitatibus?
+            <p className="scale-100 transform animate-pulse transition-transform duration-500 hover:scale-105">
+              Birds Of Eden is a cutting-edge software company dedicated to
+              transforming ideas into reality through innovative technology
+              solutions. Our mission is to empower businesses and individuals
+              with state-of-the-art software that enhances efficiency,
+              productivity, and user experience.
             </p>
+
             <div className="space-x-4">
-              <button className="rounded-md border-2 border-primary bg-primary px-4 py-2 text-sm text-white transition-colors duration-300 hover:bg-primary/80">
-                Get Started
-              </button>
-              <button className="border-1  rounded-md border-2 border-white px-4 py-2 text-sm text-white transition-colors duration-300 ">
-                Get Started
-              </button>
+              <Link to="/get-started">
+                <button className="transform rounded-md border-2 border-blue-500 bg-blue-500 px-4 py-2 text-sm text-white shadow-md transition-transform duration-300 hover:scale-105 hover:border-blue-700 hover:bg-blue-700">
+                  Get Started
+                </button>
+              </Link>
+              <Link to="/learn-more">
+                <button className="transform rounded-md border-2 border-white px-4 py-2 text-sm text-white shadow-md transition-transform duration-300 hover:scale-105 hover:border-blue-500 hover:bg-white hover:text-blue-500">
+                  Learn More
+                </button>
+              </Link>
             </div>
           </div>
           <div

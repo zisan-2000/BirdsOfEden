@@ -1,5 +1,4 @@
 import React from "react";
-import Banner from "../../assets/blog2.jpg";
 
 const BannerDetails = ({ reverse, img }) => {
   return (
@@ -19,19 +18,23 @@ const BannerDetails = ({ reverse, img }) => {
                 We Build Apps That Get Trending On Appworld
               </h1>
               <p className="text-sm text-slate-600 dark:text-slate-400">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-                ducimus eius quis ad enim aliquid iusto eum nihil exercitationem
-                necessitatibus?
+                Birds Of Eden is a cutting-edge software company dedicated to
+                transforming ideas into reality through innovative technology
+                solutions. Our mission is to empower businesses and individuals
+                with state-of-the-art software that enhances efficiency,
+                productivity, and user experience.
               </p>
               <div>
                 <ul className="flex list-inside list-disc flex-col gap-2  md:gap-4">
                   <li className="font-medium">
-                    Lorem ipsum adipisicing elit. Cum, vel.
+                    Expert software development tailored to your needs.
                   </li>
                   <li className="font-medium">
-                    dlss ipsum adipisicing elit. Cum, vel.
+                    Innovative solutions that drive growth and success.
                   </li>
-                  <li className="font-medium">adipisicing elit. Cum, vel.</li>
+                  <li className="font-medium">
+                    Commitment to quality and exceptional user experience.
+                  </li>
                 </ul>
               </div>
               <div className="space-x-4">

@@ -11,11 +11,13 @@ const WebDev = () => {
           <h2 className="mb-4 text-2xl font-bold text-gray-800 lg:text-3xl">
             Web Development Services
           </h2>
+
           <p className="mb-6 text-gray-700">
             Birds of Eden specializes in building dynamic and user-friendly
             websites tailored to help you achieve your online goals and enhance
             your digital presence.
           </p>
+
           <ul className="mb-6 list-inside list-disc">
             <li className="text-gray-700">
               <span className="font-bold">Custom Web Solutions:</span> We
@@ -23,12 +25,14 @@ const WebDev = () => {
               requirements, ensuring a personalized and engaging user
               experience.
             </li>
+
             <li className="text-gray-700">
               <span className="font-bold">Responsive Design:</span> Our websites
               are optimized for all devices and screen sizes, ensuring seamless
               functionality and accessibility across desktops, tablets, and
               smartphones.
             </li>
+
             <li className="text-gray-700">
               <span className="font-bold">Content Management:</span> With
               intuitive content management systems (CMS), you have full control

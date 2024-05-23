@@ -10,8 +10,16 @@ export default {
       colors: {
         primary: "#0070f3",
       },
+      keyframes: {
+        rotate: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(360deg)' },
+        },
+      },
+      animation: {
+        'spin-slow': 'rotate 5s linear infinite',
+      },
     },
-
     container: {
       center: true,
       padding: {

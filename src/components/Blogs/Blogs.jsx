@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import "aos/dist/aos.css";
+import React from "react";
 import Img1 from "../../assets/blog1.jpg";
 import Img2 from "../../assets/blog2.jpg";
 import Img3 from "../../assets/blog3.jpg";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const Blogs = () => {
   return (
@@ -26,7 +25,7 @@ const Blogs = () => {
             </div>
             <div className="flex justify-between pt-2 text-slate-600">
               <p>April 24, 2022</p>
-              <p className="line-clamp-1"> By Dilshad</p>
+              <p className="line-clamp-1"> By Zulfiker</p>
             </div>
             <div className="space-y-3 py-3">
               <h1 className="line-clamp-1 text-xl font-bold">
@@ -51,7 +50,7 @@ const Blogs = () => {
             </div>
             <div className="flex justify-between pt-2 text-slate-600">
               <p>Jan 3, 2023</p>
-              <p className="line-clamp-1"> By Akshay</p>
+              <p className="line-clamp-1"> By Zisan</p>
             </div>
             <div className="space-y-3 py-3">
               <h1 className="line-clamp-1 text-xl font-bold">
@@ -76,7 +75,7 @@ const Blogs = () => {
             </div>
             <div className="flex justify-between pt-2 text-slate-600">
               <p>April 24, 2024</p>
-              <p className="line-clamp-1"> By Satya</p>
+              <p className="line-clamp-1"> By Md. Hossain</p>
             </div>
             <div className="space-y-3 py-3">
               <h1 className="line-clamp-1 text-xl font-bold">

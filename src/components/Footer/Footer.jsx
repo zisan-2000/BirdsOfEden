@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BiMoon, BiSun } from "react-icons/bi";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.jpeg";
 
 const Footer = () => {
@@ -46,8 +47,8 @@ const Footer = () => {
             </a>
           </h1>
           <p className="mt-2 text-center">
-            Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Possimus, voluptate.
+            Birds of Eden is a pioneering software company dedicated to
+            transforming innovative ideas into reality.
           </p>
         </div>
         <div className="mt-8 md:mt-0 md:w-2/3">
@@ -56,16 +57,16 @@ const Footer = () => {
               <h2 className="mb-4 text-xl font-semibold">Important Links</h2>
               <ul className="flex flex-col gap-2">
                 <li className="cursor-pointer transition duration-300 hover:text-primary">
-                  Home
+                  <Link to="/">Home</Link>
                 </li>
                 <li className="cursor-pointer transition duration-300 hover:text-primary">
-                  About
+                  <Link to="/about">About Us</Link>
                 </li>
                 <li className="cursor-pointer transition duration-300 hover:text-primary">
-                  Services
+                  <Link to="/services">Services</Link>
                 </li>
                 <li className="cursor-pointer transition duration-300 hover:text-primary">
-                  Login
+                  <Link to="/">LogIn</Link>
                 </li>
               </ul>
             </div>
@@ -73,13 +74,13 @@ const Footer = () => {
               <h2 className="mb-4 text-xl font-semibold">Links</h2>
               <ul className="flex flex-col gap-2">
                 <li className="cursor-pointer transition duration-300 hover:text-primary">
-                  Privacy Policy
+                  <Link to="/privacy">Privacy policy</Link>
                 </li>
                 <li className="cursor-pointer transition duration-300 hover:text-primary">
-                  Services
+                  <Link to="/services">Services</Link>
                 </li>
                 <li className="cursor-pointer transition duration-300 hover:text-primary">
-                  About us
+                  <Link to="/about">About Us</Link>
                 </li>
               </ul>
             </div>
@@ -93,24 +94,22 @@ const Footer = () => {
                   placeholder="Email"
                 />
                 <div className="flex gap-2">
-                  <a
+                  <Link to="/">
+                    <FaInstagram className="text-3xl" />
+                  </Link>
+                  {/* <a
                     href="#"
                     className="text-white duration-200 hover:scale-105"
                   >
                     <FaInstagram className="text-3xl" />
-                  </a>
-                  <a
-                    href="#"
-                    className="text-white duration-200 hover:scale-105"
-                  >
+                  </a> */}
+                  <Link to="/">
                     <FaFacebook className="text-3xl" />
-                  </a>
-                  <a
-                    href="#"
-                    className="text-white duration-200 hover:scale-105"
-                  >
+                  </Link>
+
+                  <Link to="/">
                     <FaLinkedin className="text-3xl" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

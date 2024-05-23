@@ -20,6 +20,8 @@ import WebDev from "./pages/WebDev";
 
 import EditBook from "./fetaures/books/EditBook";
 import Error from "./pages/Error";
+import GetStartedPage from "./pages/GetStartedPage";
+import LearnMorePage from "./pages/LearnMorePage";
 
 function App() {
   useEffect(() => {
@@ -53,6 +55,8 @@ function App() {
           <Route path="/show-books" element={<BooksView />} />
           <Route path="/edit-book" element={<EditBook />} />
           <Route path="*" element={<Error />} />
+          <Route path="/get-started" element={<GetStartedPage />} />
+          <Route path="/learn-more" element={<LearnMorePage />} />
           {/* New route for Career */}
         </Routes>
 

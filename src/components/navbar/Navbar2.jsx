@@ -61,7 +61,7 @@ const Navbar2 = () => {
             <ul className="flex items-center gap-4">
               <li className="group relative cursor-pointer">
                 <Link to="" className="flex h-[72px] items-center gap-[2px]">
-                  Home{" "}
+                  Hover Here{" "}
                   <span>
                     <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
                   </span>
@@ -88,7 +88,7 @@ const Navbar2 = () => {
               </li>
 
               <li className="group relative cursor-pointer">
-                <Link to="/services" className="flex h-12 items-center gap-2">
+                <Link to="" className="flex h-12 items-center gap-2">
                   Services{" "}
                   <FaCaretDown className="transform transition-transform duration-200 group-hover:rotate-180" />
                 </Link>
@@ -131,6 +131,12 @@ const Navbar2 = () => {
                             Other Services
                           </h2>
                           <ul className="flex flex-col gap-1">
+                            <li className="cursor-pointer hover:text-primary">
+                              <Link to="/Cloud">
+                                Big Data Analysis & Dashboard Design
+                              </Link>
+                            </li>
+
                             <li className="cursor-pointer hover:text-primary">
                               <Link to="/Cloud">Cloud Services</Link>
                             </li>
