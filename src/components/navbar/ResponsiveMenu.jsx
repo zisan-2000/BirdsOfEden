@@ -10,7 +10,7 @@ const ResponsiveMenu = ({ showMenu }) => {
         showMenu ? "left-0" : "-left-[100%]"
       } fixed bottom-0 top-0 z-20 flex h-screen w-[75%] flex-col justify-between bg-slate-950 px-8 pb-6 pt-24 text-white transition-all duration-200 md:hidden`}
     >
-      <div className="card ">
+      <div className="card">
         <div className="flex items-center justify-start gap-3">
           <FaUserCircle size={50} />
           <div className="">
@@ -68,11 +68,11 @@ const ResponsiveMenu = ({ showMenu }) => {
                 Other Services{" "}
                 <FaCaretDown className="transform transition-transform duration-200 group-hover:rotate-180" />
               </NavLink>
-              <div className="absolute left-0 z-10 hidden w-96 rounded-lg bg-white text-gray-800 shadow-lg group-hover:block">
-                <div className="flex gap-4 p-4">
-                  <div className="w-36 overflow-hidden">
+              <div className="absolute left-0 z-10 hidden max-h-96 w-full max-w-md overflow-auto rounded-lg bg-white text-gray-800 shadow-lg group-hover:block">
+                <div className="flex flex-col gap-4 p-4 md:flex-row">
+                  <div className="w-full overflow-hidden md:w-36">
                     <img
-                      className="rounded-lg"
+                      className="w-full rounded-lg"
                       src="https://picsum.photos/200"
                       alt="Service"
                     />
@@ -85,7 +85,7 @@ const ResponsiveMenu = ({ showMenu }) => {
                         needs.
                       </p>
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                       <div>
                         <h2 className="text-md mb-2 font-semibold text-green-300">
                           Development
