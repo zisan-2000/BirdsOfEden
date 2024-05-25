@@ -230,12 +230,12 @@ const ResponsiveMenu = ({ showMenu }) => {
                 to="/career"
                 className={({ isActive }) =>
                   isActive
-                    ? "flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-700 px-6 py-3 font-bold uppercase text-red-500 text-white transition duration-300 hover:from-blue-700 hover:to-blue-900"
-                    : "flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-700 px-6 py-3 font-bold uppercase text-white transition duration-300 hover:from-blue-700 hover:to-blue-900"
+                    ? "flex scale-105 transform items-center justify-center rounded-full bg-gradient-to-r from-blue-400 via-pink-500 to-purple-600 px-6 py-3 font-bold uppercase text-white shadow-lg transition duration-300 hover:from-blue-500 hover:via-purple-500 hover:to-pink-600"
+                    : "flex transform items-center justify-center rounded-full bg-gradient-to-r from-blue-400 via-pink-500 to-purple-600 px-6 py-3 font-bold uppercase text-white shadow-lg transition duration-300 hover:from-blue-500 hover:via-purple-500 hover:to-pink-600"
                 }
               >
                 Career
-                <span className="absolute right-0 top-0 -mr-2 -mt-2 rounded-full bg-red-500 px-2 py-1 text-xs font-semibold text-white">
+                <span className="absolute right-0 top-0 -mr-2 -mt-2 animate-bounce rounded-full bg-red-500 px-2 py-1 text-xs font-semibold text-white shadow-md">
                   New!
                 </span>
               </NavLink>
