@@ -126,7 +126,7 @@ const AboutUs = () => {
             <h3 className="mb-2 text-2xl font-semibold text-purple-600">
               Md. Zulfiker Hossain
             </h3>
-            <p className="text-lg text-gray-700">Lead Developer</p>
+            <p className="text-lg text-gray-700">Developer</p>
           </div>
         </div>
       </div>

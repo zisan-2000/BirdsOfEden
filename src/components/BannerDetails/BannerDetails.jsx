@@ -52,7 +52,7 @@ const BannerDetails = ({ reverse, img }) => {
               <img
                 src={img}
                 alt="No image"
-                className="max-auto w-full hover:drop-shadow-md"
+                className="max-auto w-full transition-all duration-500 hover:drop-shadow-[0_0_20px_rgba(255,215,0,0.8)]"
               />
             </div>
           </div>
