@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import Footer from "../components/Footer/Footer";
 import Navbar2 from "./../components/navbar/Navbar2";
@@ -7,6 +7,9 @@ const Career = () => {
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light",
   );
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedJob, setSelectedJob] = useState(null);
 
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
@@ -28,6 +31,16 @@ const Career = () => {
       location: "Remote or Dhaka, Bangladesh",
     },
   ];
+
+  const handleApplyClick = (job) => {
+    setSelectedJob(job);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedJob(null);
+  };
 
   return (
     <motion.div
@@ -75,7 +88,10 @@ const Career = () => {
               <p className="mb-6 text-gray-600 dark:text-gray-400">
                 <span className="font-semibold">Location:</span> {job.location}
               </p>
-              <button className="w-full rounded-lg bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 md:w-auto">
+              <button
+                onClick={() => handleApplyClick(job)}
+                className="w-full rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 font-bold text-white hover:from-blue-600 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 md:w-auto"
+              >
                 Apply Now
               </button>
             </motion.div>
@@ -127,6 +143,81 @@ const Career = () => {
           </div>
         </div>
       </div>
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative w-full max-w-lg rounded-lg bg-white p-8 shadow-lg dark:bg-gray-800"
+            >
+              <button
+                className="absolute right-2 top-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+                onClick={handleCloseModal}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+              <h3 className="mb-6 text-2xl font-semibold text-gray-800 dark:text-white">
+                Apply for {selectedJob?.title}
+              </h3>
+              <label className="mb-2 block text-gray-600 dark:text-gray-400">
+                Upload your CV
+              </label>
+              <input
+                type="file"
+                className="mb-4 w-full rounded border border-gray-300 p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+              />
+              <label className="mb-2 block text-gray-600 dark:text-gray-400">
+                Upload your Cover Letter
+              </label>
+              <input
+                type="file"
+                className="mb-4 w-full rounded border border-gray-300 p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+              />
+              <label className="mb-2 block text-gray-600 dark:text-gray-400">
+                Additional Information
+              </label>
+              <textarea
+                rows="4"
+                className="mb-4 w-full rounded border border-gray-300 p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+                placeholder="Write something about yourself..."
+              ></textarea>
+              <div className="flex justify-end">
+                <button
+                  onClick={handleCloseModal}
+                  className="mr-4 rounded-lg bg-gray-500 px-4 py-2 font-bold text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                >
+                  Cancel
+                </button>
+                <button className="rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 font-bold text-white hover:from-blue-600 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                  Submit
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <Footer />
     </motion.div>
   );

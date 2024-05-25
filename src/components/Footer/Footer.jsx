@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BiMoon, BiSun } from "react-icons/bi";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.jpeg";
 
 const Footer = () => {
@@ -57,16 +57,41 @@ const Footer = () => {
               <h2 className="mb-4 text-xl font-semibold">Important Links</h2>
               <ul className="flex flex-col gap-2">
                 <li className="cursor-pointer transition duration-300 hover:text-primary">
-                  <Link to="/">Home</Link>
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "flex  items-center gap-2 text-red-500"
+                        : "flex  items-center gap-2"
+                    }
+                  >
+                    Home
+                  </NavLink>
                 </li>
                 <li className="cursor-pointer transition duration-300 hover:text-primary">
-                  <Link to="/about">About Us</Link>
+                  <NavLink
+                    to="/about"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "flex  items-center gap-2 text-red-500"
+                        : "flex  items-center gap-2"
+                    }
+                  >
+                    About Us
+                  </NavLink>
                 </li>
+
                 <li className="cursor-pointer transition duration-300 hover:text-primary">
-                  <Link to="/services">Services</Link>
-                </li>
-                <li className="cursor-pointer transition duration-300 hover:text-primary">
-                  <Link to="/">LogIn</Link>
+                  <NavLink
+                    to="/contact"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "flex items-center gap-2 text-red-500"
+                        : "flex items-center gap-2"
+                    }
+                  >
+                    Contact
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -74,13 +99,28 @@ const Footer = () => {
               <h2 className="mb-4 text-xl font-semibold">Links</h2>
               <ul className="flex flex-col gap-2">
                 <li className="cursor-pointer transition duration-300 hover:text-primary">
-                  <Link to="/privacy">Privacy policy</Link>
+                  <NavLink
+                    to="/privacy"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "flex  items-center gap-2 text-red-500"
+                        : "flex  items-center gap-2"
+                    }
+                  >
+                    Privacy policy
+                  </NavLink>
                 </li>
                 <li className="cursor-pointer transition duration-300 hover:text-primary">
-                  <Link to="/services">Services</Link>
-                </li>
-                <li className="cursor-pointer transition duration-300 hover:text-primary">
-                  <Link to="/about">About Us</Link>
+                  <NavLink
+                    to="/services"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "flex  items-center gap-2 text-red-500"
+                        : "flex  items-center gap-2"
+                    }
+                  >
+                    Services
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -94,22 +134,22 @@ const Footer = () => {
                   placeholder="Email"
                 />
                 <div className="flex gap-2">
-                  <Link to="/">
+                  <NavLink to="/">
                     <FaInstagram className="text-3xl" />
-                  </Link>
+                  </NavLink>
                   {/* <a
                     href="#"
                     className="text-white duration-200 hover:scale-105"
                   >
                     <FaInstagram className="text-3xl" />
                   </a> */}
-                  <Link to="/">
+                  <NavLink to="/">
                     <FaFacebook className="text-3xl" />
-                  </Link>
+                  </NavLink>
 
-                  <Link to="/">
+                  <NavLink to="/">
                     <FaLinkedin className="text-3xl" />
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
