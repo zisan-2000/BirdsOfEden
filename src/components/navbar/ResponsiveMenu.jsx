@@ -46,7 +46,7 @@ const ResponsiveMenu = ({ showMenu }) => {
             </li>
             <li className="p-2 hover:bg-violet-200">
               <NavLink
-                to="/services"
+                to="/Cloud"
                 className={({ isActive }) =>
                   isActive
                     ? "flex items-center gap-2 text-red-500"
@@ -93,14 +93,14 @@ const ResponsiveMenu = ({ showMenu }) => {
                         <ul className="flex flex-col gap-1">
                           <li className="mb-3 cursor-pointer ring-green-300 hover:text-primary">
                             <NavLink
-                              to="/Cloud"
+                              to="/services"
                               className={({ isActive }) =>
                                 isActive
                                   ? "flex h-12 items-center gap-2 text-red-500"
                                   : "flex h-12 items-center gap-2"
                               }
                             >
-                              Big Data Analysis & Dashboard Design
+                              Regular Services
                             </NavLink>
                           </li>
 
