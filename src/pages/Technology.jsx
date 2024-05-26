@@ -2,69 +2,78 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer/Footer";
 import Navbar2 from "../components/navbar/Navbar2";
+import djangoLogo from "./../assets/django.png";
+import laravelLogo from "./../assets/laravel.png";
+import nextjsLogo from "./../assets/next js.png";
+import phpLogo from "./../assets/php.png";
+import pythonLogo from "./../assets/python.png";
+import reactLogo from "./../assets/react.jpg";
+import reduxLogo from "./../assets/redux.jpg";
+import tailwindLogo from "./../assets/tailwind.jpg";
+import wordpressLogo from "./../assets/wordpress.jpg";
 
 const technologies = [
   {
     name: "React.js",
     description:
       "We leverage the power of React.js, a JavaScript library for building user interfaces. React.js allows us to create fast, responsive, and dynamic web applications that provide an exceptional user experience.",
-    image: "src/assets/react.jpg",
+    image: reactLogo,
     category: "frontend",
   },
   {
     name: "Next.js",
     description:
       "Next.js is our go-to framework for building server-side rendered and statically generated applications, providing optimal performance and SEO benefits.",
-    image: "src/assets/next js.png",
+    image: nextjsLogo,
     category: "frontend",
   },
   {
     name: "Redux Toolkit",
     description:
       "We use Redux Toolkit to manage complex state in our applications efficiently, making them predictable and easier to debug.",
-    image: "src/assets/redux.jpg",
+    image: reduxLogo,
     category: "frontend",
   },
   {
     name: "Tailwind CSS",
     description:
       "For styling our applications, we use Tailwind CSS, a utility-first CSS framework. Tailwind CSS enables us to rapidly build modern and sleek designs with a consistent look and feel across all our projects.",
-    image: "src/assets/tailwind.jpg",
+    image: tailwindLogo,
     category: "frontend",
   },
   {
     name: "Python",
     description:
       "Python is our preferred language for backend development, data analysis, and machine learning, thanks to its simplicity and powerful libraries.",
-    image: "src/assets/python.png",
+    image: pythonLogo,
     category: "backend",
   },
   {
     name: "Django",
     description:
       "For robust and scalable backend solutions, we rely on Django, a high-level Python web framework that encourages rapid development and clean, pragmatic design.",
-    image: "src/assets/django.png",
+    image: djangoLogo,
     category: "backend",
   },
   {
     name: "WordPress",
     description:
       "We utilize WordPress for building customizable and user-friendly content management systems, enabling clients to manage their content with ease.",
-    image: "src/assets/wordpress.jpg",
+    image: wordpressLogo,
     category: "backend",
   },
   {
     name: "PHP",
     description:
       "PHP is our choice for server-side scripting, particularly in web development, due to its flexibility and wide range of frameworks and libraries.",
-    image: "src/assets/php.png",
+    image: phpLogo,
     category: "backend",
   },
   {
     name: "Laravel",
     description:
       "For elegant and efficient PHP web applications, we use Laravel, a framework known for its simplicity, elegance, and extensive feature set.",
-    image: "src/assets/laravel.png",
+    image: laravelLogo,
     category: "backend",
   },
 ];
@@ -95,7 +104,7 @@ const Technology = () => {
             <h1 className="mb-8 text-center text-4xl font-bold text-gray-900">
               Our Technology
             </h1>
-            <p className="mb-4 transform text-lg text-gray-700 transition duration-500 ease-in-out">
+            <p className="mb-4 text-lg text-gray-700">
               At Birds of Eden, we are at the forefront of technological
               innovation. Our software solutions are built using the latest and
               most reliable technologies to ensure high performance,
