@@ -13,7 +13,7 @@ const Services = () => {
       className="min-h-screen bg-gray-100"
     >
       <Navbar2 />
-      <div className="container mx-auto py-12">
+      <div className="container mx-auto mb-12 mt-10 py-12">
         <h1 className="mb-8 text-center text-3xl font-bold text-gray-800">
           Our Services
         </h1>

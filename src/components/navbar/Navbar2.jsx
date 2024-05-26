@@ -174,50 +174,7 @@ const Navbar2 = () => {
                             Development
                           </h2>
                           <ul className="flex flex-col gap-1">
-                            <li className="cursor-pointer hover:text-primary">
-                              <NavLink
-                                to="/Web"
-                                className={({ isActive }) =>
-                                  isActive
-                                    ? "flex h-12 items-center gap-2 text-red-500"
-                                    : "flex h-12 items-center gap-2"
-                                }
-                              >
-                                Web Development
-                              </NavLink>
-                            </li>
-                            <li className="cursor-pointer hover:text-primary">
-                              <NavLink
-                                to="/IOS"
-                                className={({ isActive }) =>
-                                  isActive
-                                    ? "flex h-12 items-center gap-2 text-red-500"
-                                    : "flex h-12 items-center gap-2"
-                                }
-                              >
-                                iOS App Development
-                              </NavLink>
-                            </li>
-                            <li className="cursor-pointer hover:text-primary">
-                              <NavLink
-                                to="/Android"
-                                className={({ isActive }) =>
-                                  isActive
-                                    ? "flex h-12 items-center gap-2 text-red-500"
-                                    : "flex h-12 items-center gap-2"
-                                }
-                              >
-                                Android App Development
-                              </NavLink>
-                            </li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h2 className="text-md mb-2 font-semibold">
-                            Other Services
-                          </h2>
-                          <ul className="flex flex-col gap-1">
-                            <li className="cursor-pointer hover:text-primary">
+                            <li className="mb-3 mt-3 cursor-pointer hover:text-primary">
                               <NavLink
                                 to="/Cloud"
                                 className={({ isActive }) =>
@@ -231,16 +188,36 @@ const Navbar2 = () => {
                             </li>
                             <li className="cursor-pointer hover:text-primary">
                               <NavLink
-                                to="/Cloud"
+                                to="/Web"
                                 className={({ isActive }) =>
                                   isActive
                                     ? "flex h-12 items-center gap-2 text-red-500"
                                     : "flex h-12 items-center gap-2"
                                 }
                               >
-                                Cloud Services
+                                Web Development
                               </NavLink>
                             </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h2 className="text-md mb-2 font-semibold">
+                            Other Services
+                          </h2>
+                          <ul className="flex flex-col gap-1">
+                            <li className="cursor-pointer hover:text-primary">
+                              <NavLink
+                                to="/IOS"
+                                className={({ isActive }) =>
+                                  isActive
+                                    ? "flex h-12 items-center gap-2 text-red-500"
+                                    : "flex h-12 items-center gap-2"
+                                }
+                              >
+                                iOS App Development
+                              </NavLink>
+                            </li>
+
                             <li className="cursor-pointer hover:text-primary">
                               <NavLink
                                 to="/Mobile"
@@ -251,18 +228,6 @@ const Navbar2 = () => {
                                 }
                               >
                                 Mobile App Development
-                              </NavLink>
-                            </li>
-                            <li className="cursor-pointer hover:text-primary">
-                              <NavLink
-                                to="/Design"
-                                className={({ isActive }) =>
-                                  isActive
-                                    ? "flex h-12 items-center gap-2 text-red-500"
-                                    : "flex h-12 items-center gap-2"
-                                }
-                              >
-                                UI/UX Design
                               </NavLink>
                             </li>
                           </ul>
