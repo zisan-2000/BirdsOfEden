@@ -176,6 +176,19 @@ const Navbar2 = () => {
                           <ul className="flex flex-col gap-1">
                             <li className="cursor-pointer hover:text-primary">
                               <NavLink
+                                to="/Technologies"
+                                className={({ isActive }) =>
+                                  isActive
+                                    ? "flex  items-center gap-2 text-red-500"
+                                    : "flex  items-center gap-2"
+                                }
+                              >
+                                Our Technologies
+                              </NavLink>
+                            </li>
+
+                            <li className="cursor-pointer hover:text-primary">
+                              <NavLink
                                 to="/Web"
                                 className={({ isActive }) =>
                                   isActive

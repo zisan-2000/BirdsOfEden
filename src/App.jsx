@@ -22,6 +22,7 @@ import EditBook from "./fetaures/books/EditBook";
 import Error from "./pages/Error";
 import GetStartedPage from "./pages/GetStartedPage";
 import LearnMorePage from "./pages/LearnMorePage";
+import Technology from "./pages/Technology";
 
 function App() {
   useEffect(() => {
@@ -51,6 +52,7 @@ function App() {
           <Route path="/IOS" element={<IOSAppDev />} />
           <Route path="/Mobile" element={<MobileApp />} />
           <Route path="/Web" element={<WebDev />} />
+          <Route path="/Technologies" element={<Technology />} />
           <Route path="/add-book" element={<AddBook />} />
           <Route path="/show-books" element={<BooksView />} />
           <Route path="/edit-book" element={<EditBook />} />
