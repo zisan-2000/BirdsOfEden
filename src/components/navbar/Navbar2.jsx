@@ -101,7 +101,7 @@ const Navbar2 = () => {
                     </li>
                     <li className="p-2 hover:bg-violet-200">
                       <NavLink
-                        to="/services"
+                        to="/Cloud"
                         className={({ isActive }) =>
                           isActive
                             ? "flex h-12 items-center gap-2 text-red-500"
@@ -174,18 +174,32 @@ const Navbar2 = () => {
                             Development
                           </h2>
                           <ul className="flex flex-col gap-1">
-                            <li className="mb-3 mt-3 cursor-pointer hover:text-primary">
+                            <li className=" mb-2 cursor-pointer hover:text-primary">
                               <NavLink
                                 to="/Cloud"
                                 className={({ isActive }) =>
                                   isActive
-                                    ? "flex h-12 items-center gap-2 text-red-500"
-                                    : "flex h-12 items-center gap-2"
+                                    ? "flex  items-center gap-2 text-red-500"
+                                    : "flex  items-center gap-2"
                                 }
                               >
                                 Big Data Analysis & Dashboard Design
                               </NavLink>
                             </li>
+
+                            <li className=" mb-2 cursor-pointer hover:text-primary">
+                              <NavLink
+                                to="/services"
+                                className={({ isActive }) =>
+                                  isActive
+                                    ? "flex items-center gap-2 text-red-500"
+                                    : "flex items-center gap-2"
+                                }
+                              >
+                                Regular Services
+                              </NavLink>
+                            </li>
+
                             <li className="cursor-pointer hover:text-primary">
                               <NavLink
                                 to="/Web"
@@ -205,7 +219,7 @@ const Navbar2 = () => {
                             Other Services
                           </h2>
                           <ul className="flex flex-col gap-1">
-                            <li className="cursor-pointer hover:text-primary">
+                            <li className="mb-3 cursor-pointer hover:text-primary">
                               <NavLink
                                 to="/IOS"
                                 className={({ isActive }) =>
@@ -218,7 +232,7 @@ const Navbar2 = () => {
                               </NavLink>
                             </li>
 
-                            <li className="cursor-pointer hover:text-primary">
+                            <li className="mb-3 cursor-pointer hover:text-primary">
                               <NavLink
                                 to="/Mobile"
                                 className={({ isActive }) =>

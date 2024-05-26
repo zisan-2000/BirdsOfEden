@@ -236,6 +236,12 @@ const ResponsiveMenu = ({ showMenu }) => {
           </ul>
         </nav>
       </div>
+
+      <div className="footer mb-10 mt-8">
+        {" "}
+        {/* Adjusted mt-2 to mt-8 */}
+        <h1>© 2024 All Rights Reserved</h1>
+      </div>
     </div>
   );
 };
