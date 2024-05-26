@@ -236,9 +236,6 @@ const ResponsiveMenu = ({ showMenu }) => {
           </ul>
         </nav>
       </div>
-      <div className="footer mb-10 mt-2">
-        <h1>© 2022 All Rights Reserved</h1>
-      </div>
     </div>
   );
 };
