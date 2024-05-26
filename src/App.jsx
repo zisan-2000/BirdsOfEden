@@ -22,6 +22,7 @@ import EditBook from "./fetaures/books/EditBook";
 import Error from "./pages/Error";
 import GetStartedPage from "./pages/GetStartedPage";
 import LearnMorePage from "./pages/LearnMorePage";
+import ProductPage from "./pages/ProductPage";
 import Technology from "./pages/Technology";
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
           <Route path="*" element={<Error />} />
           <Route path="/get-started" element={<GetStartedPage />} />
           <Route path="/learn-more" element={<LearnMorePage />} />
+          <Route path="/products" element={<ProductPage />} />
           {/* New route for Career */}
         </Routes>
 

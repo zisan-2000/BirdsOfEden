@@ -91,63 +91,7 @@ const ResponsiveMenu = ({ showMenu }) => {
                           Development
                         </h2>
                         <ul className="flex flex-col gap-1">
-                          <li className="cursor-pointer hover:text-primary">
-                            <NavLink
-                              to="/Technologies"
-                              className={({ isActive }) =>
-                                isActive
-                                  ? "flex  items-center gap-2 text-red-500"
-                                  : "flex  items-center gap-2"
-                              }
-                            >
-                              Our Technologies
-                            </NavLink>
-                          </li>
-
-                          <li className="cursor-pointer hover:text-primary">
-                            <NavLink
-                              to="/Web"
-                              className={({ isActive }) =>
-                                isActive
-                                  ? "flex h-12 items-center gap-2 text-red-500"
-                                  : "flex h-12 items-center gap-2"
-                              }
-                            >
-                              Web Development
-                            </NavLink>
-                          </li>
-                          <li className="cursor-pointer hover:text-primary">
-                            <NavLink
-                              to="/IOS"
-                              className={({ isActive }) =>
-                                isActive
-                                  ? "flex h-12 items-center gap-2 text-red-500"
-                                  : "flex h-12 items-center gap-2"
-                              }
-                            >
-                              iOS App Development
-                            </NavLink>
-                          </li>
-                          <li className="cursor-pointer hover:text-primary">
-                            <NavLink
-                              to="/Android"
-                              className={({ isActive }) =>
-                                isActive
-                                  ? "flex h-12 items-center gap-2 text-red-500"
-                                  : "flex h-12 items-center gap-2"
-                              }
-                            >
-                              Android App Development
-                            </NavLink>
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h2 className="text-md mb-2 mb-8 font-semibold text-green-300">
-                          Other Services
-                        </h2>
-                        <ul className="flex flex-col gap-1">
-                          <li className="cursor-pointer ring-green-300 hover:text-primary">
+                          <li className="mb-3 cursor-pointer ring-green-300 hover:text-primary">
                             <NavLink
                               to="/Cloud"
                               className={({ isActive }) =>
@@ -159,19 +103,40 @@ const ResponsiveMenu = ({ showMenu }) => {
                               Big Data Analysis & Dashboard Design
                             </NavLink>
                           </li>
-                          <li className="cursor-pointer hover:text-primary">
+
+                          <li className="mb-3 cursor-pointer hover:text-primary">
                             <NavLink
-                              to="/Cloud"
+                              to="/IOS"
                               className={({ isActive }) =>
                                 isActive
-                                  ? "mt-5 flex h-12 items-center gap-2 text-red-500"
-                                  : "mt-5 flex h-12 items-center gap-2"
+                                  ? "flex h-12 items-center gap-2 text-red-500"
+                                  : "flex h-12 items-center gap-2"
                               }
                             >
-                              Cloud Services
+                              iOS App Development
                             </NavLink>
                           </li>
-                          <li className="cursor-pointer hover:text-primary">
+                        </ul>
+                      </div>
+                      <div>
+                        <h2 className="text-md mb-3  font-semibold text-green-300">
+                          Other Services
+                        </h2>
+                        <ul className="flex flex-col gap-1">
+                          <li className="mb-3 cursor-pointer hover:text-primary">
+                            <NavLink
+                              to="/Web"
+                              className={({ isActive }) =>
+                                isActive
+                                  ? "flex  items-center gap-2 text-red-500"
+                                  : "flex  items-center gap-2"
+                              }
+                            >
+                              Web Development
+                            </NavLink>
+                          </li>
+
+                          <li className="mb-3 cursor-pointer hover:text-primary">
                             <NavLink
                               to="/Mobile"
                               className={({ isActive }) =>
@@ -183,18 +148,6 @@ const ResponsiveMenu = ({ showMenu }) => {
                               Mobile App Development
                             </NavLink>
                           </li>
-                          <li className="cursor-pointer hover:text-primary">
-                            <NavLink
-                              to="/Design"
-                              className={({ isActive }) =>
-                                isActive
-                                  ? "flex h-12 items-center gap-2 text-red-500"
-                                  : "flex h-12 items-center gap-2"
-                              }
-                            >
-                              UI/UX Design
-                            </NavLink>
-                          </li>
                         </ul>
                       </div>
                     </div>
@@ -202,6 +155,33 @@ const ResponsiveMenu = ({ showMenu }) => {
                 </div>
               </div>
             </li>
+
+            <li className="p-2 hover:text-primary">
+              <NavLink
+                to="/Technologies"
+                className={({ isActive }) =>
+                  isActive
+                    ? "flex  items-center gap-2 text-red-500"
+                    : "flex  items-center gap-2"
+                }
+              >
+                Technologies
+              </NavLink>
+            </li>
+
+            <li className="p-2 hover:text-primary">
+              <NavLink
+                to="/products"
+                className={({ isActive }) =>
+                  isActive
+                    ? "flex  items-center gap-2 text-red-500"
+                    : "flex  items-center gap-2"
+                }
+              >
+                Products
+              </NavLink>
+            </li>
+
             <li className="p-2 hover:bg-violet-200">
               <NavLink
                 to="/contact"

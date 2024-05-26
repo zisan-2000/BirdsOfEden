@@ -35,7 +35,7 @@ const Navbar2 = () => {
       <header
         data-aos="fade"
         data-aos-duration="300"
-        className="relative z-[99] border-b-[1px] border-primary/50 bg-gradient-to-l from-blue-900 via-blue-800 to-blue-900 text-white shadow-lg"
+        className="sticky top-0 z-[99] border-b-[1px] border-primary/50 bg-gradient-to-l from-blue-900 via-blue-800 to-blue-900 text-white shadow-lg"
       >
         <nav className="container mx-auto flex h-[70px] items-center justify-between px-4 py-2 md:px-0">
           <div className="flex items-center">
@@ -176,19 +176,6 @@ const Navbar2 = () => {
                           <ul className="flex flex-col gap-1">
                             <li className="cursor-pointer hover:text-primary">
                               <NavLink
-                                to="/Technologies"
-                                className={({ isActive }) =>
-                                  isActive
-                                    ? "flex  items-center gap-2 text-red-500"
-                                    : "flex  items-center gap-2"
-                                }
-                              >
-                                Our Technologies
-                              </NavLink>
-                            </li>
-
-                            <li className="cursor-pointer hover:text-primary">
-                              <NavLink
                                 to="/Web"
                                 className={({ isActive }) =>
                                   isActive
@@ -284,6 +271,32 @@ const Navbar2 = () => {
                     </div>
                   </div>
                 </div>
+              </li>
+
+              <li className="cursor-pointer hover:text-primary">
+                <NavLink
+                  to="/Technologies"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "flex  items-center gap-2 text-red-500"
+                      : "flex  items-center gap-2"
+                  }
+                >
+                  Technologies
+                </NavLink>
+              </li>
+
+              <li className="cursor-pointer hover:text-primary">
+                <NavLink
+                  to="/products"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "flex  items-center gap-2 text-red-500"
+                      : "flex  items-center gap-2"
+                  }
+                >
+                  Our Products
+                </NavLink>
               </li>
 
               <li className="cursor-pointer">

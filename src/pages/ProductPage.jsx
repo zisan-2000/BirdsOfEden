@@ -1,0 +1,88 @@
+import { useState } from "react";
+
+import Footer from "../components/Footer/Footer";
+import Navbar2 from "../components/navbar/Navbar2";
+import Corporate from "../pages/Corporate";
+import Ecommerce from "../pages/Ecommerce";
+import Financial from "../pages/Financial";
+import Govt from "../pages/Govt";
+import SEO from "../pages/SEO";
+
+const ProductPage = () => {
+  const [activeTab, setActiveTab] = useState("govt");
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case "govt":
+        return <Govt />;
+      case "seo":
+        return <SEO />;
+      case "financial":
+        return <Financial />;
+      case "corporate":
+        return <Corporate />;
+      case "ecommerce":
+        return <Ecommerce />;
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <div>
+      <Navbar2 />
+
+      <div className="container mx-auto p-4">
+        <h1 className="my-8 bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-center text-4xl font-extrabold text-transparent sm:text-5xl">
+          Our Products
+        </h1>
+        <div className="mb-4 flex overflow-x-scroll border-b sm:overflow-x-visible">
+          <button
+            className={`whitespace-nowrap px-4 py-2 ${
+              activeTab === "govt" ? "border-b-2 border-blue-500" : ""
+            }`}
+            onClick={() => setActiveTab("govt")}
+          >
+            Govt.
+          </button>
+          <button
+            className={`whitespace-nowrap px-4 py-2 ${
+              activeTab === "seo" ? "border-b-2 border-blue-500" : ""
+            }`}
+            onClick={() => setActiveTab("seo")}
+          >
+            SEO Agencies
+          </button>
+          <button
+            className={`whitespace-nowrap px-4 py-2 ${
+              activeTab === "financial" ? "border-b-2 border-blue-500" : ""
+            }`}
+            onClick={() => setActiveTab("financial")}
+          >
+            Financial Institutions
+          </button>
+          <button
+            className={`whitespace-nowrap px-4 py-2 ${
+              activeTab === "corporate" ? "border-b-2 border-blue-500" : ""
+            }`}
+            onClick={() => setActiveTab("corporate")}
+          >
+            Corporate
+          </button>
+          <button
+            className={`whitespace-nowrap px-4 py-2 ${
+              activeTab === "ecommerce" ? "border-b-2 border-blue-500" : ""
+            }`}
+            onClick={() => setActiveTab("ecommerce")}
+          >
+            E-Commerce
+          </button>
+        </div>
+        <div className="mt-4">{renderContent()}</div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+export default ProductPage;
