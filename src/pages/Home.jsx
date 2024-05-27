@@ -8,6 +8,7 @@ import Footer from "./../components/Footer/Footer";
 import Service from "./../components/Service/Service";
 import Navbar2 from "./../components/navbar/Navbar2";
 
+import ClientPage from "../components/ClientPage/ClientPage";
 import Banner1 from "./../assets/blog1.jpg";
 import Banner2 from "./../assets/blog3.jpg";
 import BannerDetails from "./../components/BannerDetails/BannerDetails";
@@ -22,6 +23,7 @@ const Home = () => {
       <BannerDetails img={Banner2} />
       <Banner />
       <Blogs />
+      <ClientPage />
       <Footer />
       {/* Add content for the home page */}
     </div>
