@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import Footer from "../components/Footer/Footer";
+import TestYourIQ from "../components/TestYourIQ/TestYourIQ";
 import Navbar2 from "./../components/navbar/Navbar2";
 
 const Career = () => {
@@ -96,7 +97,7 @@ const Career = () => {
               </button>
             </motion.div>
           ))}
-          <div className="mt-8 flex justify-center md:justify-end">
+          {/* <div className="mt-8 flex justify-center md:justify-end">
             <button
               onClick={toggleTheme}
               className={`flex items-center rounded-full p-2 focus:outline-none ${
@@ -140,7 +141,16 @@ const Career = () => {
                 </svg>
               )}
             </button>
-          </div>
+          </div> */}
+          {/* <div className="mt-8 flex justify-center md:justify-end">
+            <Link
+              to="/test-your-iq"
+              className="w-full rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 font-bold text-white hover:from-blue-600 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 md:w-auto"
+            >
+              Test Your IQ
+            </Link>
+          </div> */}
+          <TestYourIQ />
         </div>
       </div>
       <AnimatePresence>

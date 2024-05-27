@@ -18,6 +18,7 @@ import Privacy from "./pages/Privacy";
 import Services from "./pages/Services";
 import WebDev from "./pages/WebDev";
 
+import TestYourIQ from "./components/TestYourIQ/TestYourIQ";
 import EditBook from "./fetaures/books/EditBook";
 import Error from "./pages/Error";
 import GetStartedPage from "./pages/GetStartedPage";
@@ -61,6 +62,7 @@ function App() {
           <Route path="/get-started" element={<GetStartedPage />} />
           <Route path="/learn-more" element={<LearnMorePage />} />
           <Route path="/products" element={<ProductPage />} />
+          <Route path="/test-your-iq" element={<TestYourIQ />} />
           {/* New route for Career */}
         </Routes>
 
