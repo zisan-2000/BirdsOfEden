@@ -9,7 +9,6 @@ import expressLogo from "./../assets/express.png";
 import fastapiLogo from "./../assets/fastapi.png";
 import goLogo from "./../assets/go.png";
 import javaLogo from "./../assets/java.png";
-import laravelLogo from "./../assets/laravel.png";
 import muiLogo from "./../assets/mui.png";
 import nextjsLogo from "./../assets/next js.png";
 import nodejsLogo from "./../assets/nodejs.png";
@@ -147,13 +146,6 @@ const technologies = [
     description:
       "PHP is our choice for server-side scripting, particularly in web development, due to its flexibility and wide range of frameworks and libraries.",
     image: phpLogo,
-    category: "backend",
-  },
-  {
-    name: "Laravel",
-    description:
-      "For elegant and efficient PHP web applications, we use Laravel, a framework known for its simplicity, elegance, and extensive feature set.",
-    image: laravelLogo,
     category: "backend",
   },
 ];
