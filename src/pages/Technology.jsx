@@ -1,16 +1,25 @@
-// Technology.js
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../components/Footer/Footer";
 import Navbar2 from "../components/navbar/Navbar2";
+import bootstrapLogo from "./../assets/bootstrap.png";
+import cakephpLogo from "./../assets/cakephp.png";
+import chakraUiLogo from "./../assets/chakra_ui.png";
 import djangoLogo from "./../assets/django.png";
+import expressLogo from "./../assets/express.png";
+import fastapiLogo from "./../assets/fastapi.png";
+import goLogo from "./../assets/go.png";
+import javaLogo from "./../assets/java.png";
 import laravelLogo from "./../assets/laravel.png";
+import muiLogo from "./../assets/mui.png";
 import nextjsLogo from "./../assets/next js.png";
+import nodejsLogo from "./../assets/nodejs.png";
 import phpLogo from "./../assets/php.png";
 import pythonLogo from "./../assets/python.png";
 import reactLogo from "./../assets/react.jpg";
 import reduxLogo from "./../assets/redux.jpg";
+import rustLogo from "./../assets/rust.png";
+import springbootLogo from "./../assets/springboot.png";
 import tailwindLogo from "./../assets/tailwind.jpg";
-import wordpressLogo from "./../assets/wordpress.jpg";
 
 const technologies = [
   {
@@ -42,6 +51,27 @@ const technologies = [
     category: "frontend",
   },
   {
+    name: "MUI (Material-UI)",
+    description:
+      "MUI is a popular React UI framework that offers a comprehensive set of pre-designed components for building modern and responsive web applications.",
+    image: muiLogo,
+    category: "frontend",
+  },
+  {
+    name: "Chakra UI",
+    description:
+      "Chakra UI is a simple, modular, and accessible component library that gives you the building blocks you need to build your React applications.",
+    image: chakraUiLogo,
+    category: "frontend",
+  },
+  {
+    name: "Bootstrap",
+    description:
+      "Bootstrap is a powerful, mobile-first front-end framework for faster and easier web development. It includes CSS- and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
+    image: bootstrapLogo,
+    category: "frontend",
+  },
+  {
     name: "Python",
     description:
       "Python is our preferred language for backend development, data analysis, and machine learning, thanks to its simplicity and powerful libraries.",
@@ -56,12 +86,62 @@ const technologies = [
     category: "backend",
   },
   {
-    name: "WordPress",
+    name: "Node.js",
     description:
-      "We utilize WordPress for building customizable and user-friendly content management systems, enabling clients to manage their content with ease.",
-    image: wordpressLogo,
+      "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows us to build scalable network applications quickly and efficiently.",
+    image: nodejsLogo,
     category: "backend",
   },
+  {
+    name: "Express.js",
+    description:
+      "Express.js is a fast, unopinionated, minimalist web framework for Node.js, designed for building web applications and APIs.",
+    image: expressLogo,
+    category: "backend",
+  },
+  {
+    name: "FastAPI",
+    description:
+      "FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints.",
+    image: fastapiLogo,
+    category: "backend",
+  },
+  {
+    name: "Spring Boot",
+    description:
+      "Spring Boot is an open-source Java-based framework used to create a microservice. It is used to build stand-alone and production-ready spring applications.",
+    image: springbootLogo,
+    category: "backend",
+  },
+  {
+    name: "Rust",
+    description:
+      "Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety. It’s used for performance-critical applications.",
+    image: rustLogo,
+    category: "backend",
+  },
+  {
+    name: "CakePHP",
+    description:
+      "CakePHP is an open-source web framework. It follows the model–view–controller (MVC) approach and is written in PHP, providing a robust and reliable structure for developing web applications.",
+    image: cakephpLogo,
+    category: "backend",
+  },
+  {
+    name: "Java",
+    description:
+      "Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
+    image: javaLogo,
+    category: "backend",
+  },
+  {
+    name: "Go (Golang)",
+    description:
+      "Go is an open-source programming language that makes it easy to build simple, reliable, and efficient software. It is particularly well-suited for distributed systems and cloud services.",
+    image: goLogo,
+    category: "backend",
+  },
+
   {
     name: "PHP",
     description:
