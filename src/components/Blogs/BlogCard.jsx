@@ -1,27 +1,26 @@
+// src/components/Blogs/BlogCard.jsx
 import React from "react";
 
-const BlogCard = ({ Img1 }) => {
+const BlogCard = ({ title, summary, image, date, author }) => {
   return (
-    <div>
-      <div
-        id="card"
-        className="mx-2 mb-7 rounded-lg p-4 shadow-lg transition-all duration-500 hover:scale-[1.01] hover:shadow-xl "
-      >
-        <div className="overflow-hidden rounded-lg ">
+    <div className="mx-auto my-4 max-w-md overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl">
+      <div className="md:flex">
+        <div className="md:flex-shrink-0">
           <img
-            src={Img1}
-            alt="No image"
-            className="mx-auto h-[250px] w-full object-cover transition duration-700 hover:skew-x-2 hover:scale-110"
+            className="h-48 w-full object-cover md:h-full md:w-48"
+            src={image}
+            alt={title}
           />
         </div>
-        <div className="space-y-3 py-3">
-          <h1 className="line-clamp-1 text-xl font-bold">
-            How to grow your business. How to grow your business.
-          </h1>
-          <p className="line-clamp-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. amet
-            consectetur adipisicing elit.
-          </p>
+        <div className="p-8">
+          <h2 className="mt-1 block text-lg font-medium leading-tight text-black">
+            {title}
+          </h2>
+          <p className="mt-2 text-gray-500">{summary}</p>
+          <div className="mt-4 text-gray-400">
+            <p>{date}</p>
+            <p>By {author}</p>
+          </div>
         </div>
       </div>
     </div>

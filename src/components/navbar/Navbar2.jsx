@@ -99,6 +99,20 @@ const Navbar2 = () => {
                         About Us
                       </NavLink>
                     </li>
+
+                    <li className="p-2 hover:bg-violet-200">
+                      <NavLink
+                        to="/team"
+                        className={({ isActive }) =>
+                          isActive
+                            ? "flex h-12 items-center gap-2 text-red-500"
+                            : "flex h-12 items-center gap-2"
+                        }
+                      >
+                        Meet Our Team
+                      </NavLink>
+                    </li>
+
                     <li className="p-2 hover:bg-violet-200">
                       <NavLink
                         to="/Cloud"
@@ -123,6 +137,19 @@ const Navbar2 = () => {
                         Contact
                       </NavLink>
                     </li>
+                    <li className="p-2 hover:bg-violet-200">
+                      <NavLink
+                        to="/blogs"
+                        className={({ isActive }) =>
+                          isActive
+                            ? "flex h-12 items-center gap-2 text-red-500"
+                            : "flex h-12 items-center gap-2"
+                        }
+                      >
+                        Blogs
+                      </NavLink>
+                    </li>
+
                     <li className="p-2 hover:bg-violet-200">
                       <NavLink
                         to="/privacy"

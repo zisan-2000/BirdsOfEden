@@ -1,5 +1,4 @@
 import "aos/dist/aos.css";
-import React from "react";
 import Img1 from "../../assets/blog1.jpg";
 import Img2 from "../../assets/blog2.jpg";
 import Img3 from "../../assets/blog3.jpg";

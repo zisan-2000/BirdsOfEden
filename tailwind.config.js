@@ -15,9 +15,14 @@ export default {
           '0%, 100%': { transform: 'rotate(0deg)' },
           '50%': { transform: 'rotate(360deg)' },
         },
+        gradient: {
+          '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+          '50%': { 'background-size': '200% 200%', 'background-position': 'right center' },
+        },
       },
       animation: {
         'spin-slow': 'rotate 5s linear infinite',
+        'gradient-slow': 'gradient 3s ease infinite',
       },
     },
     container: {

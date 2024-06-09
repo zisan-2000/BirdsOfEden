@@ -3,11 +3,8 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import AboutUs from "./pages/AboutUs";
 import AppDev from "./pages/AppDev";
-import Career from "./pages/Career";
 import Cloud from "./pages/Cloud";
-import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 
 import AddBook from "./fetaures/books/AddBook";
@@ -20,11 +17,16 @@ import WebDev from "./pages/WebDev";
 
 import TestYourIQ from "./components/TestYourIQ/TestYourIQ";
 import EditBook from "./fetaures/books/EditBook";
+import AboutUs from "./pages/AboutUs";
+import BlogList from "./pages/BlogList";
+import ContactForm from "./pages/ContactForm";
 import Error from "./pages/Error";
 import GetStartedPage from "./pages/GetStartedPage";
+import JobPostList from "./pages/JobPostList";
 import LearnMorePage from "./pages/LearnMorePage";
 import ProductPage from "./pages/ProductPage";
-import Technology from "./pages/Technology";
+import TeamList from "./pages/TeamList";
+import TechnologyList from "./pages/TechnologyList";
 
 function App() {
   useEffect(() => {
@@ -46,15 +48,17 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<AboutUs />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/team" element={<TeamList />} />
+          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/contact" element={<ContactForm />} />
           <Route path="/privacy" element={<Privacy />} />
-          <Route path="/career" element={<Career />} />{" "}
+          <Route path="/career" element={<JobPostList />} />{" "}
           <Route path="/App" element={<AppDev />} />
           <Route path="/Cloud" element={<Cloud />} />
           <Route path="/IOS" element={<IOSAppDev />} />
           <Route path="/Mobile" element={<MobileApp />} />
           <Route path="/Web" element={<WebDev />} />
-          <Route path="/Technologies" element={<Technology />} />
+          <Route path="/Technologies" element={<TechnologyList />} />
           <Route path="/add-book" element={<AddBook />} />
           <Route path="/show-books" element={<BooksView />} />
           <Route path="/edit-book" element={<EditBook />} />
@@ -63,6 +67,7 @@ function App() {
           <Route path="/learn-more" element={<LearnMorePage />} />
           <Route path="/products" element={<ProductPage />} />
           <Route path="/test-your-iq" element={<TestYourIQ />} />
+          <Route path="/blogs" element={<BlogList />} />
           {/* New route for Career */}
         </Routes>
 

@@ -11,6 +11,7 @@ const Career = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
+  const [applicantName, setApplicantName] = useState("");
 
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
@@ -41,6 +42,11 @@ const Career = () => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedJob(null);
+    setApplicantName("");
+  };
+
+  const handleNameChange = (e) => {
+    setApplicantName(e.target.value);
   };
 
   return (
@@ -97,59 +103,7 @@ const Career = () => {
               </button>
             </motion.div>
           ))}
-          {/* <div className="mt-8 flex justify-center md:justify-end">
-            <button
-              onClick={toggleTheme}
-              className={`flex items-center rounded-full p-2 focus:outline-none ${
-                theme === "dark"
-                  ? "bg-gray-700 text-gray-200"
-                  : "bg-gray-300 text-gray-800"
-              }`}
-            >
-              <span className="mr-2">
-                {theme === "dark" ? "Light" : "Dark"} Mode
-              </span>
-              {theme === "dark" ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-              )}
-            </button>
-          </div> */}
-          {/* <div className="mt-8 flex justify-center md:justify-end">
-            <Link
-              to="/test-your-iq"
-              className="w-full rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 font-bold text-white hover:from-blue-600 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 md:w-auto"
-            >
-              Test Your IQ
-            </Link>
-          </div> */}
+
           <TestYourIQ />
         </div>
       </div>
@@ -191,6 +145,16 @@ const Career = () => {
               <h3 className="mb-6 text-2xl font-semibold text-gray-800 dark:text-white">
                 Apply for {selectedJob?.title}
               </h3>
+              <label className="mb-2 block text-gray-600 dark:text-gray-400">
+                Applicant Name
+              </label>
+              <input
+                type="text"
+                value={applicantName}
+                onChange={handleNameChange}
+                className="mb-4 w-full rounded border border-gray-300 p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+                placeholder="Write your name..."
+              />
               <label className="mb-2 block text-gray-600 dark:text-gray-400">
                 Upload your CV
               </label>
