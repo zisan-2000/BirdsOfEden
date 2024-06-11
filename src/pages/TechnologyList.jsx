@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { NavLink, Outlet } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import Navbar2 from "../components/navbar/Navbar2";
 
@@ -20,7 +21,6 @@ const TechnologyList = () => {
   return (
     <div>
       <Navbar2 />
-
       <div className="container mx-auto mb-10 mt-10 rounded-lg bg-gray-50 p-6 shadow-xl">
         <h1 className="mb-10 text-center text-4xl font-bold text-blue-700">
           Our Technology
@@ -34,60 +34,30 @@ const TechnologyList = () => {
           solutions are built using the latest and most reliable technologies to
           ensure high performance, scalability, and security.
         </p>
-        <div className="space-y-12">
-          <div>
-            <h2 className="mb-6 text-3xl font-semibold text-gray-800">
-              Frontend Technologies
-            </h2>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {technologies
-                .filter((tech) => tech.category === "frontend")
-                .map((technology) => (
-                  <div
-                    key={technology.id}
-                    className="flex transform flex-col items-center rounded-lg bg-white p-6 text-center shadow-lg transition duration-300 hover:scale-105"
-                  >
-                    <img
-                      src={technology.image}
-                      alt={technology.name}
-                      className="mb-4 h-24 w-24 animate-spin-slow rounded-full border-4 border-gray-300 object-cover"
-                    />
-                    <h3 className="mb-2 text-2xl font-bold text-gray-800">
-                      {technology.name}
-                    </h3>
-                    <p className="text-gray-600">{technology.description}</p>
-                  </div>
-                ))}
-            </div>
-          </div>
-          <div>
-            <h2 className="mb-6 text-3xl font-semibold text-gray-800">
-              Backend Technologies
-            </h2>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {technologies
-                .filter((tech) => tech.category === "backend")
-                .map((technology) => (
-                  <div
-                    key={technology.id}
-                    className="flex transform flex-col items-center rounded-lg bg-white p-6 text-center shadow-lg transition duration-300 hover:scale-105"
-                  >
-                    <img
-                      src={technology.image}
-                      alt={technology.name}
-                      className="mb-4 h-24 w-24 animate-spin-slow rounded-full border-4 border-gray-300 object-cover"
-                    />
-                    <h3 className="mb-2 text-2xl font-bold text-gray-800">
-                      {technology.name}
-                    </h3>
-                    <p className="text-gray-600">{technology.description}</p>
-                  </div>
-                ))}
-            </div>
-          </div>
+        <div className="mb-6 flex justify-center">
+          <NavLink
+            to="frontend"
+            className={({ isActive }) =>
+              isActive
+                ? "mr-2 rounded bg-red-700 px-4 py-2 text-white"
+                : "mr-2 rounded bg-green-500 px-4 py-2 text-white"
+            }
+          >
+            Frontend Technologies
+          </NavLink>
+          <NavLink
+            to="backend"
+            className={({ isActive }) =>
+              isActive
+                ? "rounded bg-red-700 px-4 py-2 text-white"
+                : "rounded bg-blue-500 px-4 py-2 text-white"
+            }
+          >
+            Backend Technologies
+          </NavLink>
         </div>
+        <Outlet context={{ technologies }} />
       </div>
-
       <Footer />
     </div>
   );

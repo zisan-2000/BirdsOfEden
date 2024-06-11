@@ -279,7 +279,7 @@ const Navbar2 = () => {
                 </div>
               </li>
 
-              <li className="cursor-pointer hover:text-primary">
+              {/* <li className="cursor-pointer hover:text-primary">
                 <NavLink
                   to="/Technologies"
                   className={({ isActive }) =>
@@ -290,19 +290,191 @@ const Navbar2 = () => {
                 >
                   Technologies
                 </NavLink>
-              </li>
+              </li> */}
 
-              <li className="cursor-pointer hover:text-primary">
+              <li className="group relative cursor-pointer">
                 <NavLink
-                  to="/products"
+                  to="/products/govt"
                   className={({ isActive }) =>
                     isActive
-                      ? "flex  items-center gap-2 text-red-500"
-                      : "flex  items-center gap-2"
+                      ? "flex h-12 items-center gap-2"
+                      : "flex h-12 items-center gap-2"
+                  }
+                >
+                  Technologies
+                  <FaCaretDown className="transform transition-transform duration-200 group-hover:rotate-180" />
+                </NavLink>
+                <div className="absolute left-0 z-10 hidden w-96 rounded-lg bg-white text-gray-800 shadow-lg group-hover:block">
+                  <div className="flex gap-4 p-4">
+                    <div className="w-36 overflow-hidden">
+                      <img
+                        className="rounded-lg"
+                        src="https://picsum.photos/200"
+                        alt="Service"
+                      />
+                    </div>
+                    <div>
+                      <div className="mb-4">
+                        <h1 className="text-lg font-semibold">
+                          Our Technologies
+                        </h1>
+                        <p className="text-sm text-gray-600">
+                          Explore our top-rated services tailored to meet your
+                          needs.
+                        </p>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <h2 className="text-md mb-2 font-semibold">
+                            Technologies
+                          </h2>
+                          <ul className="flex flex-col gap-1">
+                            <li className="mb-2 cursor-pointer hover:text-primary">
+                              <NavLink
+                                to="/technologies/frontend"
+                                className={({ isActive }) =>
+                                  isActive
+                                    ? "flex items-center gap-2 text-red-500"
+                                    : "flex items-center gap-2"
+                                }
+                              >
+                                Frontend Technology
+                              </NavLink>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div>
+                          <h2 className="text-md mb-2 font-semibold">Other</h2>
+                          <ul className="flex flex-col gap-1">
+                            <li className="mb-2 cursor-pointer hover:text-primary">
+                              <NavLink
+                                to="/technologies/backend"
+                                className={({ isActive }) =>
+                                  isActive
+                                    ? "flex items-center gap-2 text-red-500"
+                                    : "flex items-center gap-2"
+                                }
+                              >
+                                Backend Technology
+                              </NavLink>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li className="group relative cursor-pointer">
+                <NavLink
+                  to="/products/govt"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "flex h-12 items-center gap-2"
+                      : "flex h-12 items-center gap-2"
                   }
                 >
                   Our Products
+                  <FaCaretDown className="transform transition-transform duration-200 group-hover:rotate-180" />
                 </NavLink>
+                <div className="absolute left-0 z-10 hidden w-96 rounded-lg bg-white text-gray-800 shadow-lg group-hover:block">
+                  <div className="flex gap-4 p-4">
+                    <div className="w-36 overflow-hidden">
+                      <img
+                        className="rounded-lg"
+                        src="https://picsum.photos/200"
+                        alt="Service"
+                      />
+                    </div>
+                    <div>
+                      <div className="mb-4">
+                        <h1 className="text-lg font-semibold">Our Products</h1>
+                        <p className="text-sm text-gray-600">
+                          Explore our top-rated services tailored to meet your
+                          needs.
+                        </p>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <h2 className="text-md mb-2 font-semibold">
+                            Products
+                          </h2>
+                          <ul className="flex flex-col gap-1">
+                            <li className="mb-2 cursor-pointer hover:text-primary">
+                              <NavLink
+                                to="/products/govt"
+                                className={({ isActive }) =>
+                                  isActive
+                                    ? "flex items-center gap-2 text-red-500"
+                                    : "flex items-center gap-2"
+                                }
+                              >
+                                Govt
+                              </NavLink>
+                            </li>
+                            <li className="mb-2 cursor-pointer hover:text-primary">
+                              <NavLink
+                                to="/products/seo"
+                                className={({ isActive }) =>
+                                  isActive
+                                    ? "flex items-center gap-2 text-red-500"
+                                    : "flex items-center gap-2"
+                                }
+                              >
+                                SEO Agencies
+                              </NavLink>
+                            </li>
+                            <li className="cursor-pointer hover:text-primary">
+                              <NavLink
+                                to="/products/financial"
+                                className={({ isActive }) =>
+                                  isActive
+                                    ? "flex items-center gap-2 text-red-500"
+                                    : "flex items-center gap-2"
+                                }
+                              >
+                                Financial
+                              </NavLink>
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h2 className="text-md mb-2 font-semibold">
+                            Other Products
+                          </h2>
+                          <ul className="flex flex-col gap-1">
+                            <li className="mb-3 cursor-pointer hover:text-primary">
+                              <NavLink
+                                to="/products/corporate"
+                                className={({ isActive }) =>
+                                  isActive
+                                    ? "flex items-center gap-2 text-red-500"
+                                    : "flex items-center gap-2"
+                                }
+                              >
+                                Corporate
+                              </NavLink>
+                            </li>
+                            <li className="mb-3 cursor-pointer hover:text-primary">
+                              <NavLink
+                                to="/products/ecommerce"
+                                className={({ isActive }) =>
+                                  isActive
+                                    ? "flex items-center gap-2 text-red-500"
+                                    : "flex items-center gap-2"
+                                }
+                              >
+                                Ecommerce
+                              </NavLink>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
 
               <li className="cursor-pointer">

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react"; // Make sure useState and useEffect are imported
+import { useNavigate, useParams } from "react-router-dom";
 
 import Footer from "../components/Footer/Footer";
 import Navbar2 from "../components/navbar/Navbar2";
@@ -9,7 +10,13 @@ import Govt from "../pages/Govt";
 import SEO from "../pages/SEO";
 
 const ProductPage = () => {
-  const [activeTab, setActiveTab] = useState("govt");
+  const { tab } = useParams();
+  const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState(tab || "govt");
+
+  useEffect(() => {
+    setActiveTab(tab || "govt");
+  }, [tab]);
 
   const renderContent = () => {
     switch (activeTab) {
@@ -41,7 +48,7 @@ const ProductPage = () => {
             className={`whitespace-nowrap px-4 py-2 ${
               activeTab === "govt" ? "border-b-2 border-blue-500" : ""
             }`}
-            onClick={() => setActiveTab("govt")}
+            onClick={() => navigate("/products/govt")}
           >
             Govt.
           </button>
@@ -49,7 +56,7 @@ const ProductPage = () => {
             className={`whitespace-nowrap px-4 py-2 ${
               activeTab === "seo" ? "border-b-2 border-blue-500" : ""
             }`}
-            onClick={() => setActiveTab("seo")}
+            onClick={() => navigate("/products/seo")}
           >
             SEO Agencies
           </button>
@@ -57,7 +64,7 @@ const ProductPage = () => {
             className={`whitespace-nowrap px-4 py-2 ${
               activeTab === "financial" ? "border-b-2 border-blue-500" : ""
             }`}
-            onClick={() => setActiveTab("financial")}
+            onClick={() => navigate("/products/financial")}
           >
             Financial Institutions
           </button>
@@ -65,7 +72,7 @@ const ProductPage = () => {
             className={`whitespace-nowrap px-4 py-2 ${
               activeTab === "corporate" ? "border-b-2 border-blue-500" : ""
             }`}
-            onClick={() => setActiveTab("corporate")}
+            onClick={() => navigate("/products/corporate")}
           >
             Corporate
           </button>
@@ -73,7 +80,7 @@ const ProductPage = () => {
             className={`whitespace-nowrap px-4 py-2 ${
               activeTab === "ecommerce" ? "border-b-2 border-blue-500" : ""
             }`}
-            onClick={() => setActiveTab("ecommerce")}
+            onClick={() => navigate("/products/ecommerce")}
           >
             E-Commerce
           </button>
